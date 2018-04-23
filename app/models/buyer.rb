@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Buyer < ApplicationRecord
   validates :control_number, presence: true, length: { is: 8 }
   validates :name, presence: true
