@@ -4,8 +4,10 @@ est_1:
   name: alexis
   control_number: '69696969'
   phone: MyString
+  email: test@test.io
 
 est_2:
   name:
   control_number: '21312'
   phone: MyString
+  email: test
