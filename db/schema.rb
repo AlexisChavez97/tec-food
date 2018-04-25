@@ -30,8 +30,4 @@ ActiveRecord::Schema.define(version: 2018_04_23_214916) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "test_table", id: false, force: :cascade do |t|
-    t.integer "a"
-  end
-
 end
