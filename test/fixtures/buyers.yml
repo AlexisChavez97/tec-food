@@ -1,11 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-est_1:
+good_user:
   name: alexis
   control_number: '69696969'
-  phone: MyString
+  phone: phonenumber
+  email: test@test.io
 
-est_2:
+bad_user:
   name:
   control_number: '21312'
-  phone: MyString
+  phone: phonenumber
+  email: test_email
+

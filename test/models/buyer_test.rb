@@ -4,8 +4,8 @@ require 'test_helper'
 
 class BuyerTest < ActiveSupport::TestCase
   def setup
-    @valid_buyer = buyers(:est_1)
-    @invalid_buyer = buyers(:est_2)
+    @valid_buyer = buyers(:good_user)
+    @invalid_buyer = buyers(:bad_user)
   end
 
   test 'buyer is valid' do
