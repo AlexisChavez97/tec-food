@@ -5,33 +5,27 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name",
-                            placeholder: 'Nombre y apellido' %>
+    <%= f.text_field :name, placeholder: 'Nombre y apellido' %>
   </div>
 
   <div class="field">
     <%= f.label :control_number %><br />
-    <%= f.text_field :control_number, autofocus: true,
-                                      autocomplete: "control_number",
-                                      placeholder: '8 digitos' %>
+    <%= f.text_field :control_number, placeholder: '8 digitos' %>
   </div>
 
   <div class="field">
     <%= f.label :phone %><br />
-    <%= f.text_field :phone, autofocus: true, autocomplete: "phone",
-                             placeholder: 'Numero celular' %>
+    <%= f.text_field :phone, placeholder: 'Numero celular' %>
   </div>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email",
-                              placeholder: 'Email' %>
+    <%= f.email_field :email, placeholder: 'Email' %>
   </div>
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off",
-                                    placeholder: '8 - 16 caracteres' %>
+    <%= f.password_field :password,  placeholder: '8 - 16 caracteres' %>
   </div>
 
   <div class="field">
