@@ -1,16 +1,31 @@
-<!DOCTYPE html>
+<!DOCTYPE html class = "html">
 <html>
   <head>
-    <title>Tecfood</title>
+    <title>TecFood</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Questrial" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
-  <body>
+  <body class = "body">
+    <!--Navbar-->
+    <nav class="navbar navbar-light">
+      <%= link_to image_tag('tec-food.png', :class => 'logo-navbar') + 'TecFood', root_path , :class => 'home-btn'%>
+    </nav>
+    <div class = "container-fluid text-center p-5">
+      <%= yield %>
+    </div>
+    
+    <footer class = "footer text-center">
+      <div>
+        <p>Todos los derechos reservados y así...</p>
+      </div>
+    </footer>
 
-    <%= yield %>
+    
   </body>
 </html>
