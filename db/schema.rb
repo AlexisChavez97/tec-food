@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_24_203836) do
+ActiveRecord::Schema.define(version: 2018_05_04_220857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,10 +36,16 @@ ActiveRecord::Schema.define(version: 2018_04_24_203836) do
     t.index ["reset_password_token"], name: "index_buyers_on_reset_password_token", unique: true
   end
 
+  create_table "sellers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "stores", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
   end
 
 end
