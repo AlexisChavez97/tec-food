@@ -1,6 +1,16 @@
-<h1>Hi! this is where the food is at</h1>
+<h1 class = "mb-2 title" > Hi! </h1>
+<h2 class = "mb-5 subtitle" > Select your favorite cafeteria to see the menu </h2>
 
-<% @stores.each do |store| %>
-<% end  %>
-
+<div class = "container-fluid text-center">
+  <% @stores.each do |store| %>
+    <div class="card m-3 d-inline-block">
+      <div class="card-body">
+        <h5 class="card-title"><%= store.name %></h5>
+        <img class="card-img-top my-2" src="..." alt="Card image cap">
+        <p class="card-text"><%= store.description %></p>
+        <%= link_to 'Ver menú', '#',class: "btn btn-primary d-block" %>
+      </div>
+    </div>
+  <% end  %>
+</div>
 <%= link_to 'log out', destroy_buyer_session_path, method: :delete %>

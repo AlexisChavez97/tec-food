@@ -13,8 +13,19 @@ Rails.application.routes.draw do
     registrations:      'buyers/registrations',
     confirmations:      'buyers/confirmations',
   }
+
+  authenticated :buyer do
+    root to: 'menu#index'
+  end
+
+  authenticated :seller do
+    root to: 'sellers_dashboard#home'
+  end
+
   resource :buyers
+
   root 'static_pages#home'
 
+  get 'sellers/dashboard', to: 'sellers_dashboard#home'
   get 'buyers/menu', to: 'menu#index'
 end
