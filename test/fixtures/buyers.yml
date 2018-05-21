@@ -28,6 +28,7 @@ good_user:
   phone: phonenumber
   email: test@test.io
 
+
 bad_user:
   name:
   control_number: '21312'

@@ -1,8 +1,7 @@
 class StoresController < ApplicationController
-
-  def
-
   def new
     @store = Store.new
   end
+
+  def create; end
 end

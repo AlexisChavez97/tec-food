@@ -32,6 +32,16 @@
   text-decoration: none;
 }
 
+.log-out-btn{
+  color: black;
+}
+
+.log-out-btn:hover{
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
 .logo{
   border-radius: 50%;
   display: block;
@@ -72,34 +82,52 @@
 }
 
 .container-btn-user{
-  background-color: #f3993a;
   border-radius: 50px;
   box-sizing: border-box;
   height: 230px;
   margin: 0 auto;
-  padding-top: 80px;
+  padding-top: 38px;
   max-width: 230px;
+}
+
+//Button buyer container
+.buyer-btn-c{
+  background-color: #f3993a;
+}
+
+//Button seller container
+.seller-btn-c{
+  background-color: #a2e3fd;
 }
 
 .btn-user{
   color: #000000;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
-.btn-user:hover{
-  color: #f1de7d;
+.buyer-btn-c .btn-user:hover{
+  color: #a2e3fd;
+  text-decoration: none;
+}
+
+.seller-btn-c .btn-user:hover{
+  color: #f3993a;
   text-decoration: none;
 }
 
 .footer{
-  background-color: #f1de7d;
+  border-top: 2px solid #f1de7d;
   bottom: 0;
   box-sizing: border-box;
   display: block;
-  font-size: .8rem;
+  font-size: .6rem;
   padding-top: 20px;
   padding-bottom: 15px;
   width: 100%;
+}
+
+.logo-tec{
+  width: 50px;
 }
 
 .row{
@@ -107,10 +135,33 @@
   padding: 0;
 }
 
+.icon{
+  display: block;
+  margin: 0 auto;
+}
+
+.card{
+  box-sizing: border-box;
+  height: 25rem;
+  position: relative;
+  width: 18rem;
+}
+
+.card-text{
+  height: 10rem;
+}
+
+.card-img-top{
+  height: 5rem;
+}
+
 @media (min-width: 768px) {
   .container-btn-user{
     height: 300px;
     max-width: 300px;
-    padding-top: 110px;
+    padding-top: 70px;
+  }
+  .btn-user{
+    font-size: 3rem;
   }
 }

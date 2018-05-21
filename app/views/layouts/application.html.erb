@@ -12,18 +12,20 @@
   </head>
 
   <body class = "body">
+    <% if seller_signed_in? %>
+      <%= render 'layouts/seller_nav_bar' %>
+    <% else %>
+      <%= render 'layouts/buyer_nav_bar' %>
+    <% end %>
 
-    <!--Navbar-->
-    <nav class="navbar navbar-light">
-      <%= link_to image_tag('tec-food.png', :class => 'logo-navbar') + 'TecFood', root_path , :class => 'home-btn'%>
-    </nav>
     <div class = "container-fluid text-center p-5">
       <%= yield %>
     </div>
 
-    <footer class = "footer text-center">
+    <footer class = "footer">
       <div>
-        <p>Todos los derechos reservados y así...</p>
+        <p class = "text-left pl-2">Todos los derechos reservados y así...</p>
+        <%= image_tag('logo_tec.png', :class => 'logo-tec pl-2')%>
       </div>
     </footer>
 
