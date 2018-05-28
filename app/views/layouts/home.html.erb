@@ -1,0 +1,33 @@
+<!DOCTYPE html class = "html">
+<html>
+  <head>
+    <title>TecFood</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Questrial" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body class = "body">
+    <!--Navbar-->
+    <nav class="navbar navbar-light">
+      <%= link_to image_tag('tec-food.png', :class => 'logo-navbar') + 'TecFood', root_path , :class => 'home-btn'%>
+    </nav>
+    
+    <div class = "container-fluid text-center p-5">
+      <%= yield %>
+    </div>
+    
+    <footer class = "footer">
+      <div>
+        <p class = "text-left pl-2">Todos los derechos reservados y así...</p>
+        <%= image_tag('logo_tec.png', :class => 'logo-tec pl-2')%>
+      </div>
+    </footer>
+
+    
+  </body>
+</html>
