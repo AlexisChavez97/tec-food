@@ -1,0 +1,10 @@
+<% if buyer_signed_in? %>
+   <nav class="navbar navbar-light">
+    <%= link_to image_tag('tec-food.png', class: 'logo-navbar') + 'TecFood', root_path, class: 'home-btn'%>
+    <%= link_to 'Log out', destroy_buyer_session_path, class: 'log-out-btn', method: :delete %>
+  </nav>
+<% else %>
+  <nav class="navbar navbar-light">
+    <%= link_to image_tag('tec-food.png', class: 'logo-navbar') + 'TecFood', root_path, class: 'home-btn'%>
+  </nav>
+<% end  %>

@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_05_04_220857) do
+=======
+ActiveRecord::Schema.define(version: 2018_05_21_232134) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +40,17 @@ ActiveRecord::Schema.define(version: 2018_05_04_220857) do
     t.index ["reset_password_token"], name: "index_buyers_on_reset_password_token", unique: true
   end
 
+  create_table "products", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "MXN", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "seller_id"
+    t.string "description"
+    t.index ["seller_id"], name: "index_products_on_seller_id"
+  end
+
   create_table "sellers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -58,6 +73,14 @@ ActiveRecord::Schema.define(version: 2018_05_04_220857) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "description"
+<<<<<<< HEAD
+=======
   end
 
+  create_table "test_table", id: false, force: :cascade do |t|
+    t.integer "a"
+>>>>>>> master
+  end
+
+  add_foreign_key "products", "sellers"
 end
