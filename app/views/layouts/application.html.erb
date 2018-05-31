@@ -12,17 +12,6 @@
   </head>
 
   <body class = "body">
-<<<<<<< HEAD
-    <!--Navbar-->
-    <nav class="navbar navbar-light">
-      <%= link_to image_tag('tec-food.png', :class => 'logo-navbar') + 'TecFood', root_path , :class => 'home-btn'%>
-    </nav>
-    
-    <div class = "container-fluid text-center p-5">
-      <%= yield %>
-    </div>
-    
-=======
     <% if seller_signed_in? %>
       <%= render 'layouts/seller_nav_bar' %>
     <% else %>
@@ -33,7 +22,6 @@
       <%= yield %>
     </div>
 
->>>>>>> master
     <footer class = "footer">
       <div>
         <p class = "text-left pl-2">Todos los derechos reservados y así...</p>

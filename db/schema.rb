@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2018_05_04_220857) do
-=======
 ActiveRecord::Schema.define(version: 2018_05_21_232134) do
->>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,13 +69,6 @@ ActiveRecord::Schema.define(version: 2018_05_21_232134) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "description"
-<<<<<<< HEAD
-=======
-  end
-
-  create_table "test_table", id: false, force: :cascade do |t|
-    t.integer "a"
->>>>>>> master
   end
 
   add_foreign_key "products", "sellers"
