@@ -1,0 +1,27 @@
+<div>
+  <span class="title align-center"><%= @store.name %></span>
+</div>
+<div>
+  <span class="description align-center"><%= @store.description %></span>
+</div>
+
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="p-2 col-sm-12 col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= link_to product.name, order_product_path, class: 'product-title' %>
+          </h5>
+          <div class= 'product-image'>
+            <%= image_tag product.image %>
+          </div>
+          <p class="card-text">
+            <%= product.price %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to 'Regresar', buyers_menu_path, class: 'btn btn-primary mt-4' %>
+</div>

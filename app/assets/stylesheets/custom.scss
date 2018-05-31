@@ -93,7 +93,7 @@
 
 .btn-user{
   color: #000000;
-  font-size: 2rem; 
+  font-size: 2rem;
 }
 
 .buyer-btn-c .btn-user:hover{
@@ -149,6 +149,43 @@
     padding-top: 70px;
   }
   .btn-user{
-    font-size: 3rem; 
+    font-size: 3rem;
   }
+}
+
+span.title {
+  font-size: 3.5em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+span.description {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: gray;
+}
+
+.product-image img {
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  color:  rgb(100, 100, 100);
+}
+
+.product-title:hover {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
 }

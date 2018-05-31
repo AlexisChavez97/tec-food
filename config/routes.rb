@@ -26,9 +26,11 @@ Rails.application.routes.draw do
 
   resource :buyers
 
-  resource :stores
+  resources :stores
 
   root 'static_pages#home'
+
+  get '/order_product', to: 'stores#order_product'
 
   get 'sellers/dashboard', to: 'sellers_dashboard#home'
   get 'buyers/menu', to: 'menu#index'

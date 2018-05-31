@@ -10,6 +10,7 @@
 #  description    :string
 #  price_cents    :integer          default(0), not null
 #  price_currency :string           default("MXN"), not null
+#  store_id       :bigint(8)
 #
 
 class Product < ApplicationRecord
@@ -17,4 +18,5 @@ class Product < ApplicationRecord
   validates :description, presence: true, length: { minimum: 10, maximum: 300 }
   monetize :price_cents
   belongs_to :store
+  has_one_attached :image
 end
