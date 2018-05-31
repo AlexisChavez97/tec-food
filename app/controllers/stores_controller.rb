@@ -22,10 +22,6 @@ class StoresController < ApplicationController
 
   def edit; end
 
-  def order_product
-    @product = Product.find(params[:id])
-  end
-
   def update
     if @store.update?(store_params)
       flash[:success] = 'Store was succesfully updated'

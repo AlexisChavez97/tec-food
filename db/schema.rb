@@ -102,7 +102,7 @@ ActiveRecord::Schema.define(version: 2018_05_31_221633) do
     t.datetime "updated_at", null: false
     t.string "description"
     t.bigint "seller_id"
-    t.boolean "order"
+    t.boolean "order", default: false
     t.index ["seller_id"], name: "index_stores_on_seller_id"
   end
 

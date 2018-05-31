@@ -1,5 +1,5 @@
 class AddColumnToStore < ActiveRecord::Migration[5.2]
   def change
-    add_column :stores, :order, :boolean
+    add_column :stores, :order, :boolean, default: false
   end
 end

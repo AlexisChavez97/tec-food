@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
-  before_action :load_product, only: [:edit, :update, :destroy]
-  before_action :authenticate_seller!
+  before_action :load_product, only: [:edit, :update, :destroy, :show]
+  before_action :authenticate_seller!, except: [:show]
+  before_action :authenticate_buyer!, only: [:show]
+
 
   def new
     @product = Product.new
@@ -10,7 +12,9 @@ class ProductsController < ApplicationController
     @products = current_seller.store.products
   end
 
-  def show; end
+  def show
+    @store = @product.store
+  end
 
   def create
     @product = current_seller.store.products.create(products_params)
