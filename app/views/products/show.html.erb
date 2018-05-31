@@ -1,5 +1,8 @@
-<div class="row-md-2 offset-lg-5">
-    <div class="card">
+<div class = "text-left">  
+  <%= link_to '< Go back', store_path(@store), class: 'mb-3 back d-inline-block' %>
+</div>
+<div class="p-2 col-sm-12 col-md-4 center-div">
+    <div class="card center-div">
       <div class="card-body">
         <h5 class="card-title">
           <%= @product.name %>
@@ -14,5 +17,4 @@
       </div>
     </div>
   </div>
-  <%= link_to 'Regresar', store_path(@store), class: 'btn btn-primary mt-4' %>
 </div>
