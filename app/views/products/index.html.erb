@@ -1,3 +1,6 @@
+<div class = "text-left">  
+  <%= link_to '< Go back', '/', class: 'mb-3 back d-inline-block' %>
+</div>
 <div class="row">
   <div class="col-sm-12 col-md-3">
     <%= link_to '+ Add product', new_product_path, class: 'btn btn-light w-100 my-3' %>
@@ -5,8 +8,8 @@
 </div>
 <div class="row">
   <% @products.each do |product| %>
-    <div class="p-2 col-sm-12 col-md-4">
-      <div class="card">
+    <div class="p-2 col-xs-12 col-sm-6 col-md-4">
+      <div class="card card-config">
         <div class="card-body">
           <h5 class="card-title">
             <%= product.name %>
@@ -17,8 +20,10 @@
           <p class="card-text">
             <%= product.price %>
           </p>
-          <%= link_to 'Editar', edit_product_path(product), class: 'btn  btn-primary' %>
-          <%= link_to 'Eliminar', product_path(product), method: :delete, class: 'card-link' %>
+          <div class = "card-buttons">
+            <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-primary' %>
+            <%= link_to 'Delete', product_path(product), method: :delete, class: 'card-link' %>
+          </div>
         </div>
       </div>
     </div>

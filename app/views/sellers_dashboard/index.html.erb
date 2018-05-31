@@ -1,0 +1,23 @@
+<% if current_seller.stores.nil? %>
+    <h1>Hello there welcome to Tecfood!</h1>
+    <h2>Add a store so you can start selling...</h2>
+    <%= link_to '+ Add store', new_stores_path, class: "btn btn-dark mt-5 btn-lg" %>
+<% else %>
+    <% @stores.each do |store| %>
+        <div class = "mb-5">
+            <%= link_to 'Edit', edit_store_path(store), class: 'btn  btn-primary' %>
+            <%= link_to 'Delete', store_path(store), method: :delete, class: 'btn  btn-light' %>
+        </div>
+
+        <div class = "store-title mb-3">
+            <%= store.name %>
+        </div>
+
+        <div class = "store-description mx-4 py-4">
+            <%= store.description %>
+        </div>
+
+        <%= link_to 'Manage store', products_path, class: 'btn btn-dark my-5 manage-button' %>
+
+    <%end%>
+<%end%>

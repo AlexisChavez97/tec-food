@@ -19,17 +19,17 @@ Rails.application.routes.draw do
   end
 
   authenticated :seller do
-    root to: 'sellers_dashboard#home'
+    root to: 'sellers_dashboard#index'
   end
 
   resources :products
 
   resource :buyers
 
-  resource :stores
+  resources :stores
 
   root 'static_pages#home'
 
-  get 'sellers/dashboard', to: 'sellers_dashboard#home'
+  get 'sellers/dashboard', to: 'sellers_dashboard#index'
   get 'buyers/menu', to: 'menu#index'
 end

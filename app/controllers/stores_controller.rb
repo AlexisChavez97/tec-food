@@ -9,8 +9,8 @@ class StoresController < ApplicationController
   def show; end
 
   def create
-    @store = current_seller.store.create(store_params)
-    if @store.persisted?
+    @store = current_seller.stores.create(store_params)
+    if @store.save
       flash[:success] = 'Store was succesfully created'
       redirect_to sellers_dashboard_path
     else
@@ -21,7 +21,7 @@ class StoresController < ApplicationController
   def edit; end
 
   def update
-    if @store.update?(store_params)
+    if @store.update(store_params)
       flash[:success] = 'Store was succesfully updated'
       redirect_to sellers_dashboard_path
     else

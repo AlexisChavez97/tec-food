@@ -1,0 +1,9 @@
+<%= form_for(@store) do |f| %>
+  <%= render 'store_form', f: f %>
+  <div class="row">
+    <div class="form-group col-lg-5 center-div">
+      <%= f.submit 'Update', class: 'btn btn-primary' %>
+      <%= link_to 'Cancel', sellers_dashboard_path, class: 'btn btn-secondary' %>
+    </div>
+  </div>
+<% end %>

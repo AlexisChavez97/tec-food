@@ -18,7 +18,8 @@
 #
 
 class Seller < ApplicationRecord
-  has_one :store
+  has_many :stores
+  has_many :products
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

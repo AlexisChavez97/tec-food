@@ -7,8 +7,7 @@
 }
 
 .container-fluid{
-  height: 100%;
-  position: relative;
+    position: relative;
 }
 
 .logo-navbar{
@@ -140,6 +139,54 @@
 
 .card-img-top{
   height: 5rem;
+}
+
+.center-div{
+  display: block;
+  margin: 0 auto;
+}
+
+.store-title{
+  font-size: 3rem;
+}
+
+.store-description{
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+.manage-button{
+  background-color:#f3983a;
+  border: none;
+  font-size: 1.3rem;
+}
+
+.manage-button:hover{
+  background-color: #f2ab47;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.card-config{
+  height: 250px;
+  width: auto;
+}
+
+.card-buttons{
+  bottom: 10px;
+  left: 80px;
+  position: absolute;
+}
+
+.back{
+  color: #f3993a;
+  font-size: 1.2rem;
+  font-style: bold;
+}
+
+.back:hover{
+  color: #9c5406;
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
