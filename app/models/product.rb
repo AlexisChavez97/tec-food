@@ -15,6 +15,6 @@
 class Product < ApplicationRecord
   validates :name, presence: true, length: { maximum: 20 }
   validates :description, presence: true, length: { minimum: 10, maximum: 300 }
-  belongs_to :seller
   monetize :price_cents
+  belongs_to :store
 end

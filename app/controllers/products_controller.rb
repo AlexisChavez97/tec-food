@@ -1,5 +1,6 @@
-class Products < ApplicationController
+class ProductsController < ApplicationController
   before_action :load_product, only: [:edit, :update, :destroy]
+  before_action :authenticate_seller!
 
   def new
     @product = Product.new
@@ -12,7 +13,7 @@ class Products < ApplicationController
   def show; end
 
   def create
-    @product = current_seller.products.create(product_params)
+    @product = current_seller.products.create(products_params)
     if @product.persisted?
       flash[:success] = 'Product was succesfully created'
       redirect_to products_path
@@ -24,7 +25,7 @@ class Products < ApplicationController
   def edit; end
 
   def update
-    if @product.update?(product_params)
+    if @product.update(products_params)
       flash[:success] = 'Product was succesfully updated'
       redirect_to products_path
     else

@@ -7,6 +7,7 @@
 }
 
 .container-fluid{
+  height: 100%;
   position: relative;
 }
 
@@ -29,16 +30,6 @@
 
 .home-btn:hover{
   color: #f3983a;
-  text-decoration: none;
-}
-
-.log-out-btn{
-  color: black;
-}
-
-.log-out-btn:hover{
-  font-weight: bold;
-  color: black;
   text-decoration: none;
 }
 
@@ -102,7 +93,7 @@
 
 .btn-user{
   color: #000000;
-  font-size: 2rem;
+  font-size: 2rem; 
 }
 
 .buyer-btn-c .btn-user:hover{
@@ -142,13 +133,9 @@
 
 .card{
   box-sizing: border-box;
-  height: 25rem;
+  height: auto;
   position: relative;
   width: 18rem;
-}
-
-.card-text{
-  height: 10rem;
 }
 
 .card-img-top{
@@ -162,6 +149,6 @@
     padding-top: 70px;
   }
   .btn-user{
-    font-size: 3rem;
+    font-size: 3rem; 
   }
 }

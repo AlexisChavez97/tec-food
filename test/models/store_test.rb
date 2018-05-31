@@ -7,6 +7,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  description :string
+#  seller_id   :bigint(8)
 #
 
 require 'test_helper'
