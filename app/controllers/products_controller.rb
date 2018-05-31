@@ -7,16 +7,16 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = current_seller.products
+    @products = current_seller.store.products
   end
 
   def show; end
 
   def create
-    @product = current_seller.products.create(products_params)
-    if @product.persisted?
+    @product = current_seller.store.products.create(products_params)
+    if @product.save
       flash[:success] = 'Product was succesfully created'
-      redirect_to products_path
+      redirect_to sellers_dashboard_path
     else
       render :new
     end
@@ -25,9 +25,10 @@ class ProductsController < ApplicationController
   def edit; end
 
   def update
+
     if @product.update(products_params)
       flash[:success] = 'Product was succesfully updated'
-      redirect_to products_path
+      redirect_to sellers_dashboard_path
     else
       render :edit
     end
@@ -36,9 +37,9 @@ class ProductsController < ApplicationController
   def destroy
     if @product.destroy
       flash[:danger] = 'Product deleted'
-      redirect_to products_path
+      redirect_to sellers_dashboard_path
     else
-      redirect_to products_path
+      redirect_to sellers_dashboard_path
     end
   end
 
@@ -49,6 +50,6 @@ class ProductsController < ApplicationController
   end
 
   def products_params
-    params.require(:product).permit(:name, :price, :description)
+    params.require(:product).permit(:name, :price, :description, :image)
   end
 end

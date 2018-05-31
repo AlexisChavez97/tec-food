@@ -1,15 +1,17 @@
 class StoresController < ApplicationController
-  before_action :authenticate_seller!
-  before_action :load_store, only: [:edit, :update, :destroy]
+  before_action :buyer_or_seller
+  before_action :load_store, only: [:edit, :update, :destroy, :show]
 
   def new
     @store = Store.new
   end
 
-  def show; end
+  def show
+    @products = @store.products
+  end
 
   def create
-    @store = current_seller.stores.create(store_params)
+    @store = current_seller.build_store(store_params)
     if @store.save
       flash[:success] = 'Store was succesfully created'
       redirect_to sellers_dashboard_path
@@ -19,6 +21,10 @@ class StoresController < ApplicationController
   end
 
   def edit; end
+
+  def order_product
+    @product = Product.find(params[:id])
+  end
 
   def update
     if @store.update(store_params)

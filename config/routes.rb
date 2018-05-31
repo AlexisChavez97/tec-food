@@ -31,5 +31,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   get 'sellers/dashboard', to: 'sellers_dashboard#index'
+  get '/order_product', to: 'stores#order_product'
+
   get 'buyers/menu', to: 'menu#index'
 end

@@ -10,4 +10,12 @@ class ApplicationController < ActionController::Base
                                                        :phone, :password,
                                                        :password_confirmation])
   end
+
+  def buyer_or_seller
+    if current_seller != nil
+      authenticate_seller!
+    else
+      authenticate_buyer!
+    end
+  end
 end

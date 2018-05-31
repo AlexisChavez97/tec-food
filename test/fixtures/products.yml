@@ -10,6 +10,7 @@
 #  description    :string
 #  price_cents    :integer          default(0), not null
 #  price_currency :string           default("MXN"), not null
+#  store_id       :bigint(8)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
