@@ -1,4 +1,4 @@
-class Products < ApplicationController
+class ProductsController < ApplicationController
   before_action :load_product, only: [:edit, :update, :destroy]
 
   def new

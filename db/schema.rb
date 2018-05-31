@@ -71,9 +71,5 @@ ActiveRecord::Schema.define(version: 2018_05_31_013743) do
     t.string "description"
   end
 
-  create_table "test_table", id: false, force: :cascade do |t|
-    t.integer "a"
-  end
-
   add_foreign_key "products", "sellers"
 end
