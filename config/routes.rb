@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     root to: 'sellers_dashboard#home'
   end
 
+  resources :products
   resource :buyers
 
   root 'static_pages#home'
