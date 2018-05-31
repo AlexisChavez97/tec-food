@@ -106,10 +106,6 @@ ActiveRecord::Schema.define(version: 2018_05_31_221633) do
     t.index ["seller_id"], name: "index_stores_on_seller_id"
   end
 
-  create_table "test_table", id: false, force: :cascade do |t|
-    t.integer "a"
-  end
-
   add_foreign_key "products", "stores"
   add_foreign_key "stores", "sellers"
 end

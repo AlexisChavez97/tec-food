@@ -3,7 +3,7 @@ class SellersDashboardController < ApplicationController
   before_action :load_store, only: [:show]
 
   def index
-    @stores = current_seller.stores
+    @store = current_seller.store
   end
 
   def show; end
