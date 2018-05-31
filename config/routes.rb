@@ -23,7 +23,10 @@ Rails.application.routes.draw do
   end
 
   resources :products
+
   resource :buyers
+
+  resource :stores
 
   root 'static_pages#home'
 

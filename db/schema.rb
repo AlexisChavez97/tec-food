@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_31_013743) do
+ActiveRecord::Schema.define(version: 2018_05_31_192319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,9 @@ ActiveRecord::Schema.define(version: 2018_05_31_013743) do
     t.string "description"
     t.integer "price_cents", default: 0, null: false
     t.string "price_currency", default: "MXN", null: false
+    t.bigint "store_id"
     t.index ["seller_id"], name: "index_products_on_seller_id"
+    t.index ["store_id"], name: "index_products_on_store_id"
   end
 
   create_table "sellers", force: :cascade do |t|
@@ -69,7 +71,11 @@ ActiveRecord::Schema.define(version: 2018_05_31_013743) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "description"
+    t.bigint "seller_id"
+    t.index ["seller_id"], name: "index_stores_on_seller_id"
   end
 
   add_foreign_key "products", "sellers"
+  add_foreign_key "products", "stores"
+  add_foreign_key "stores", "sellers"
 end

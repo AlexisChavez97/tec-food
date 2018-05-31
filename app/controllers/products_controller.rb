@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :load_product, only: [:edit, :update, :destroy]
+  before_action :authenticate_seller!
 
   def new
     @product = Product.new
