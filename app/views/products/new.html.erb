@@ -1,1 +1,9 @@
-<h1>something</h1>
+<%= form_for(@product) do |f| %>
+  <%= render 'product_form', f: f %>
+  <div class="row">
+    <div class="form-group col-lg-5 offset-lg-3">
+      <%= f.submit 'Add', class: 'btn btn-primary' %>
+      <%= link_to 'Cancel', products_path, class: 'btn btn-secondary' %>
+    </div>
+  </div>
+<% end %>
